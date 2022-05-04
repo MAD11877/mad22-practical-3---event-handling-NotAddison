@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         // --- Previous Wk2 Codes ---
         // Get button(s)
         Button followButton = findViewById(R.id.followButton);
+        Button messageButton = findViewById(R.id.messageButton);
 
         // Check if user is following
         if (user1.followed){
@@ -53,6 +54,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        messageButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MessageGroup.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
